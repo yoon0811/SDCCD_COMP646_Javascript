@@ -3,30 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My movie collection</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
     <h1>My movie collection</h1>
-    <form id="">
+    <form id="fmSaveMovie">
         <fieldset>
             <legend>Required</legend>
-            <label>Movie title</label>
-            <input type="text" placeholder="title" required id="">    
-          
-            <label></label>
-            <input type="text" placeholder="title" required id="">    
+            <div>
+                <label>Movie title</label>
+                <input type="text" placeholder="movie title" required id="movieTitle">                    
+            </div>
+            
+            <div>
+                <label>Director</label>
+                <input type="text" placeholder="Director" required id="movieDirector">    
+            </div>
+
+            <div>
+                <label>Year I watched</label>
+                <input type="number" placeholder="year" required id="movieYear">    
+            </div>
+  
         </fieldset>
         
+
         <fieldset>
+            <!--Star rating Start-->
             <legend>Optional</legend>
-            <label></label>
-            <input type="text" placeholder="title" required id="">    
+            
+            <!--  
+            <div class="starlist rating">
+                <ul>
+                <li>
+                    <div class="checkbox">
+                    <input type="checkbox" name="star_box" value="1" id="star" hidden="" class="rate_radio">
+                    <label for="star">
+                    </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                    <input type="checkbox" name="star_box" value="2" id="star02" class="rate_radio" hidden="">
+                    <label for="star02">
+                    </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                    <input type="checkbox" name="star_box" value="3" id="star03" class="rate_radio" hidden="">
+                    <label for="star03">
+                    </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                    <input type="checkbox" name="star_box" value="4" id="star04" class="rate_radio" hidden="">
+                    <label for="star04">
+                    </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                    <input type="checkbox" name="star_box" value="5" id="star05" hidden="" class="rate_radio">
+                    <label for="star05">
+                    </label>
+                    </div>
+                </li>
+                </ul>
+            </div>
+
+            Star rating End -->
+
+
+            <label>Comment</label>
+            <input type="textarea" placeholder="Comment" id="movieCommt">    
         </fieldset>
-        <input value="Cancel" type="reset"> <input value="Save" type="submit" id="saveMovie">
+        <div class="btn_group">
+            <input value="Cancel" type="reset"> <input value="Save" type="submit" id="saveMovie">
+        </div>
     </form>
 
-    <input value="Get Movies" type="button" id="getMovie">
+    <form id="getMovie">
+
+        <input value="Get Movies" type="button" id="getMovie">
+    </form>
+    <div id="showMovie"></div>
     <script src="scripts.js"></script>
 </body>
 </html>
